@@ -1,0 +1,7 @@
+mixin icon(iconName, width = undefined, height = undefined, className = '')
+  unless (className == '')
+    svg(class= className, width= width, height= height)
+      use(xlink:href=`./img/sprite.svg#${iconName}`)
+  else
+    svg(width= width, height= height)
+      use(xlink:href=`./img/sprite.svg#${iconName}`)

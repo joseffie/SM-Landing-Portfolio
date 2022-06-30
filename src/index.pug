@@ -1,0 +1,15 @@
+extends base/pug/base.pug
+
+append variables
+   -
+      var title = 'Главная | Sensei Media'
+      var menuHref = '/'
+
+block content
+  include ./components/mainscreen/mainscreen.pug
+
+  include ./components/stats/stats.pug
+
+  include ./components/order/order.pug
+
+  include ./components/portfolio/portfolio.pug

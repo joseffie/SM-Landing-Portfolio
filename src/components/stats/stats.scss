@@ -1,0 +1,94 @@
+.stats {
+  @include adaptive-value('margin-bottom', 80, 45);
+
+  &__block {
+    padding: rem(40) rem(55);
+    background-color: $white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 18px 0px #00000014;
+
+    @include media('wsm') {
+      padding: rem(30);
+    }
+
+    @include media('sm') {
+      padding: rem(30) rem(20);
+    }
+  }
+
+  &__title {
+    margin: 0px 0px rem(30) 0px;
+    font-size: rem(38);
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: uppercase;
+    @include adaptive-font(38, 24);
+
+    @include media('lg') {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: rem(30);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+
+    @include media('lg') {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-right: rem(60);
+    border-right: 1px solid #c7c7c7;
+
+    &:last-child {
+      padding-right: 0;
+      border-right: 0;
+    }
+
+    @include media('lg') {
+      flex: 0 1 45%;
+      padding-right: 0;
+      border-right: 0;
+      text-align: center;
+    }
+
+    @include media('smd') {
+      flex: 1 1 100%;
+    }
+
+    @media (max-width: $container-width) {
+      padding-right: rem(35);
+    }
+  }
+
+  &__item-title {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(115deg, #ffbc2a 16%, #ff4f39 94%);
+    background-color: $color-main;
+    margin: 0px 0px 5px;
+    font-size: rem(30);
+    color: $color-main;
+    font-weight: 800;
+    line-height: 1;
+    @include adaptive-font(30, 24);
+
+    span {
+      @include adaptive-font(50, 32);
+    }
+  }
+
+  &__item-desc {
+    font-weight: 500;
+    line-height: 110%;
+    @include adaptive-font(16, 14);
+  }
+}

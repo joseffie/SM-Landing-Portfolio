@@ -1,0 +1,137 @@
+.footer {
+  background-color: $white;
+
+  &__copyright {
+    width: 100%;
+    background-color: #2d2d2d;
+    padding: rem(10) 0px;
+
+    @include media('sm') {
+      padding: rem(15) 0px;
+    }
+  }
+
+  &__copyright-text {
+    color: $white;
+    font-size: rem(14);
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.footer-top {
+  padding: rem(50) 0 rem(70) 0;
+
+  @include media('sm') {
+    padding: rem(35) 0px rem(50) 0px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: rem(30);
+
+    @include media('lg') {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__block {
+    @include media('lg') {
+      &--main {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+
+      &--info {
+        flex: 0 1 45%;
+        text-align: center;
+      }
+    }
+
+    @include media('xsm') {
+      &--info {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: rem(10);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__main-link {
+    display: block;
+    margin-bottom: rem(20);
+    color: $text-color;
+    line-height: 150%;
+    text-decoration: none;
+    cursor: auto;
+
+    span {
+      cursor: pointer;
+      border-bottom: 1px solid $text-color;
+      transition: color 0.3s ease, border-bottom-color 0.3s ease;
+
+      @include hover {
+        color: $color-main;
+        border-bottom-color: $color-main;
+      }
+    }
+  }
+
+  &__callback {
+    display: inline-block;
+    padding: rem(14) rem(38);
+    text-decoration: none;
+    color: $white;
+    font-weight: 600;
+    line-height: 160%;
+    border-radius: 75px;
+    transition: box-shadow 0.4s ease;
+    @include gradient;
+
+    @include hover {
+      box-shadow: -8px 0 15px #ffbc2a9a, 8px 0 15px #ff5039a4;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(30);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+
+  &__links {
+    list-style: none;
+    padding: 0;
+    color: $text-color;
+  }
+
+  &__link {
+    margin-bottom: rem(15);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      @include hover {
+        color: $color-main;
+      }
+    }
+  }
+}

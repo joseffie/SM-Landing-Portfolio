@@ -1,0 +1,19 @@
+include ../../mixins/mixins.pug
+block variables
+
+doctype html
+html.page(lang='ru')
+  include ./head.pug
+
+  body
+    .wrapper
+      include ../../components/header/header.pug
+
+      main.wrapper__content
+        block content
+
+      include ../../components/footer/footer.pug
+
+    block script
+      script(src='https://unpkg.com/swiper@8/swiper-bundle.min.js')
+      script(src='js/index.min.js')

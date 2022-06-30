@@ -1,0 +1,57 @@
+.portfolio
+  .container
+    h2.portfolio__title Наши работы
+    .portfolio__slider-wrap
+      .portfolio__slider.swiper
+        .portfolio__slide-wrapper.swiper-wrapper
+          .portfolio__block.swiper-slide
+            .portfolio__item-header
+              .portfolio__logo
+                +icon('alibaba', 170, 120)
+              p.portfolio__desc
+                | Крупнейшая китайская публичная компания, работающая в сфере интернет-коммерции,
+                | владелец веб-порталов Taobao.com, Tmall, Alibaba.com, AliExpress и ряда других.
+            .portfolio__results-block
+              h4.portfolio__item-title Результат:
+              .portfolio__results
+                .portfolio__result.portfolio-result
+                  h5.portfolio-result__percent +&nbsp;85,71%
+                  p.portfolio-result__desc увеличение количества обращений с рекламы
+                .portfolio__result.portfolio-result
+                  h5.portfolio-result__percent +&nbsp;83,51%
+                  p.portfolio-result__desc увеличение конверсии
+                .portfolio__result.portfolio-result
+                  h5.portfolio-result__percent -&nbsp;50,51%
+                  p.portfolio-result__desc снижение стоимости за обращение
+            .portfolio__item-footer
+              h4.portfolio__item-title Системы:
+              .portfolio__systems
+                img.portfolio__system(src='@img/systems/google-adwords.png', alt='Google Adwords')
+                img.portfolio__system(src='@img/systems/yandex-direct.png', alt='Yandex Direct')
+
+          .portfolio__block.swiper-slide
+            .portfolio__item-header
+              .portfolio__logo
+                +icon('macy', 240, 65)
+              p.portfolio__desc
+                | Одна из крупнейших и старейших сетей розничной торговли в США.
+            .portfolio__results-block
+              h4.portfolio__item-title Результат:
+              .portfolio__results
+                .portfolio__result.portfolio-result
+                  h5.portfolio-result__percent +&nbsp;75,28%
+                  p.portfolio-result__desc увеличение количества обращений с рекламы
+                .portfolio__result.portfolio-result
+                  h5.portfolio-result__percent +&nbsp;62,03%
+                  p.portfolio-result__desc увеличение конверсии
+                .portfolio__result.portfolio-result
+                  h5.portfolio-result__percent -&nbsp;29,88%
+                  p.portfolio-result__desc снижение стоимости за обращение
+            .portfolio__item-footer
+              h4.portfolio__item-title Системы:
+              .portfolio__systems
+                img.portfolio__system(src='@img/systems/google-adwords.png', alt='Google Adwords')
+                img.portfolio__system(src='@img/systems/yandex-direct.png', alt='Yandex Direct')
+
+      .portfolio__btn-prev.swiper-button-prev
+      .portfolio__btn-next.swiper-button-next

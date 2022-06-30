@@ -1,0 +1,19 @@
+section.order
+  .container
+    .order__row
+      .order__content
+        h2.order__title Заказать консультацию специалиста
+        p.order__desc
+          | Заполните форму, и мы свяжемся с
+          | вами в ближайшее время!
+        form.order__form(action='/', method='get')
+          input.order__input(type='text', placeholder='Ваше имя', required)
+          input.order__input(type='tel', placeholder='Номер вашего телефона', required)
+          textarea.order__textarea(name='order-textarea', placeholder='Ваш вопрос', required)
+          input.order__checkbox#agree-processing(type='checkbox', name='agree-processing', required)
+          label.order__checkbox-label(for='agree-processing')
+            | Я согласен с условиями обработки персональных данных
+          button.order__submit(type='submit') Отправить
+
+      .order__image
+        img(src='@img/order-phone.svg', alt='Консультация через мобильное устройство')
